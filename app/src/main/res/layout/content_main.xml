@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="5dp">
+
+        <TextView
+            android:id="@+id/tituloTexto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Pulsaciones"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/contadorNumero"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="34sp"
+            tools:ignore="MissingConstraints" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/incrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="incrementar"
+            android:text="+"
+            android:textSize="24sp"
+
+            tools:ignore="MissingConstraints" />
+
+        <Space
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            />
+
+        <Button
+            android:id="@+id/decrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decrementar"
+            android:text="-"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/resetea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="resetear"
+            android:text="Resetear"
+            tools:ignore="MissingConstraints"
+
+
+            />
+
+        <EditText
+            android:id="@+id/n_reseteo"
+            android:layout_width="72sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:cursorVisible="false"
+            />
+
+        <CheckBox
+            android:id="@+id/checkBoxNegativos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Permitir Negativos"
+            android:textSize="12sp"
+            android:onClick="decrementar"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
